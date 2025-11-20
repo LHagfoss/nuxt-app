@@ -1,0 +1,15 @@
+{
+    "welcome": "Velkommen",
+    "navbar": {
+        "home": "Hjem",
+        "about_me": "Om meg",
+        "contact": "Kontakt",
+        "projects": "Prosjekter"
+    },
+    "home": {
+        "hero": {
+            "heroTitle": "Utvikler",
+            "smallTitle": "Fullstack utvikler fra Norge"
+        }
+    }
+}
