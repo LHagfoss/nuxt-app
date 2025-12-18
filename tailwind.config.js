@@ -1,13 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./src/app/layout/**/*.{vue,js,ts,jsx,tsx}",
-    "./src/app/pages/**/*.{vue,js,ts,jsx,tsx}",
-    "./src/components/**/*.{vue,js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,vue,ts}",
+    "./src/layouts/**/*.vue",
+    "./src/pages/**/*.vue",
+    "./src/plugins/**/*.{js,ts}",
+    "./src/app.vue",
+    "./src/error.vue",
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
 

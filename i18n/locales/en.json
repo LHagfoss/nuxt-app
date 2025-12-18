@@ -3,6 +3,7 @@
     "navbar": {
         "home": "Home",
         "about_me": "About me",
+        "blog": "Blog",
         "contact": "Contact",
         "projects": "Projects"
     },

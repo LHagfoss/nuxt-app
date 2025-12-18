@@ -6,21 +6,26 @@ export default defineNuxtConfig({
     head: {
       title: "Nuxt",
       htmlAttrs: {
-        lang: "no"
+        lang: "no",
       },
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      ]
-    }
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    },
   },
 
-  compatibilityDate: "2025-07-15",
-  devtools: { enabled: true },
+  runtimeConfig: {
+    githubToken: process.env.GITHUB_TOKEN,
+    public: {
+      githubUsername: process.env.GITHUB_USERNAME,
+    },
+  },
+
+  image: {
+    domains: ["raw.githubusercontent.com"],
+  },
+
+  srcDir: "src/",
   dir: {
-    public: 'public/',
-    modules: 'modules/',
-    shared: 'shared/',
-    layouts: 'layout',
+    layouts: "layout",
   },
 
   modules: [
@@ -29,8 +34,17 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/hints",
     "@nuxtjs/i18n",
-    "@nuxt/fonts"
+    "@nuxt/fonts",
+    "@nuxtjs/mdc",
+    "@nuxt/content",
+    "@nuxt/image",
+    "@nuxtjs/mdc",
+    "@nuxthub/core-nightly",
   ],
+
+  hub: {
+    // cache: true,
+  },
 
   i18n: {
     strategy: "no_prefix",
@@ -41,16 +55,17 @@ export default defineNuxtConfig({
     ],
     detectBrowserLanguage: {
       useCookie: true,
-      cookieKey: 'i18n_redirected',
-      redirectOn: 'root',
-    }
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+    },
   },
+
+  css: ["./public/main.css"],
 
   vite: {
-    plugins: [
-      tailwindcss()
-    ]
+    plugins: [tailwindcss()],
   },
 
-  css: ["./public/main.css"]
+  compatibilityDate: "2025-07-15",
+  devtools: { enabled: true },
 });

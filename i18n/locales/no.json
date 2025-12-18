@@ -3,6 +3,7 @@
     "navbar": {
         "home": "Hjem",
         "about_me": "Om meg",
+        "blog": "Blogg",
         "contact": "Kontakt",
         "projects": "Prosjekter"
     },
